@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="first component" icon-name="utility:activity" >
+    <div class="slds-m-around_medium">
+        <p><b>Hello,</b>{name}</p>
+        <lightning-input label="Name" value={name} onchange={handleChange} >
+        </lightning-input>
+        <lightning-button class="slds-m-around_medium" label="submit" onclick={handleClick} slot="actions" >
+                </lightning-button>
+    </div>
+    <h1>hello world</h1>
+</lightning-card>
+</template>

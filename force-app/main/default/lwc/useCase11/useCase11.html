@@ -1,0 +1,30 @@
+<template>
+        <lightning-card title="Create Case Record">
+            <lightning-layout>
+                <lightning-layout-item size="6">
+    
+                    <!-- Displaying fields to get information. -->
+                    <lightning-input class="slds-p-around_medium" label="Subject" name="Subject" 
+                        onchange={subjectChangedHandler}></lightning-input>
+                    <lightning-input class="slds-p-around_medium" label="Description" name="Description" 
+                        onchange={descriptionChangedHandler}></lightning-input>
+                    
+                        <template if:true={OriginValues.data}>
+                                <lightning-combobox name="Origin"
+                                                    label="Origin"
+                                                    value={value}
+                                                    placeholder="-Select-"
+                                                    options={OriginValues.data.values}
+                                                    onchange={OriginhandleChange} >
+                                </lightning-combobox>
+                          </template>
+                    <br/>
+                    <lightning-button class="slds-m-left_x-small" label="Create Case" variant="brand" 
+                        onclick={createCase}></lightning-button>
+                        <div  class="slds-p-around_medium slds-box slds-m-around_medium" style="border-color: purple;">
+                                Case Id : {caseId}
+                        </div>
+                </lightning-layout-item>
+            </lightning-layout>
+        </lightning-card>
+    </template>

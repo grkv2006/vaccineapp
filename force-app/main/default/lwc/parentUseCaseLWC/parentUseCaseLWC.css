@@ -1,0 +1,13 @@
+.div-border {
+    border:5px solid blue;
+    border-style: dotted double;
+    padding: 60px;
+    
+}
+.div-margin {
+margin: 80px;
+}
+
+.div-color {
+    background-color:lightgray;
+}

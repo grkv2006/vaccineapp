@@ -1,0 +1,41 @@
+<template>
+        <div class="topbar"></div>
+        <div class="slds-card" style="background-color: #efefef;">
+            <div class="slds-container slds-p-around_large">
+                <div class="slds-align_absolute-center slds-p-around_medium">
+                    <lightning-button icon-name="utility:search" label="Search" variant="inverse"
+                        class="button-card" onclick={showVaccines}>
+                    </lightning-button>
+                </div> 
+               
+                <div class="slds-p-bottom_large">
+                    <h6 class="sectionHeader">1. Select Vaccine type</h6>
+                    <div class="slds-grid boxLayout slds-m-top_small">
+                        <div class="slds-col slds-size_1-of-1 slds-p-around_medium">
+                            <lightning-combobox  value={Vaccinetype} options={Vaccinetypeoptions}
+                                onchange={handleVaccinetypeChange}></lightning-combobox>        
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-p-bottom_large">
+                    <h6 class="sectionHeader">2.Enter Zipcode</h6>
+                    <div class="slds-grid boxLayout slds-m-top_small">
+                        <div class="slds-col slds-size_1-of-1 slds-p-around_medium">
+                                <lightning-input type="text"  pattern="[0-9]+" title="number only" class="slds-m-bottom_medium" value ={ZipCode} 
+                                onchange={handleZipcode}></lightning-input>  
+                         
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-p-bottom_large">
+                        <h6 class="sectionHeader">3. Hospital Type </h6>
+                        <div class="slds-grid boxLayout slds-m-top_small">
+                            <div class="slds-col slds-size_1-of-1 slds-p-around_medium">
+                                <lightning-combobox  value={HospitalType} options={HospitalTypeoptions}
+                                    onchange={handleHospitalTypeChange}></lightning-combobox>        
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </template>

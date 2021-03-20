@@ -1,0 +1,26 @@
+<template>
+        <lightning-card title="Search Lead by Name" icon-name="standard:lead">
+                <lightning-button label="Search" variant="brand" onclick={handleSearch} slot="actions"></lightning-button>
+                <lightning-button label="Cancel" variant="destructive" onclick={handleReset} slot="actions"></lightning-button>
+                <div class="slds-m-around_large">
+                        <lightning-input type="text" label="Enter lead Name" onchange={handleLeadName}></lightning-input>
+                        <template if:true={LeadSourceValue.data}>
+                                <lightning-combobox name="Source"
+                                                    label="Source"
+                                                    value={value}
+                                                    placeholder="-Select-"
+                                                    options={LeadSourceValue.data.values}
+                                                    onchange={SourcehandleChange} >
+                                </lightning-combobox>
+                          </template>
+                    </div>
+                    <div if:true={result} class="slds-p-around_medium slds-box slds-m-around_medium" style="border-color: purple;">
+                            <lightning-datatable data={result}
+                                                 columns={columns}
+                                                 key-field="Id"
+                                                 hide-checkbox-column="true">
+                            </lightning-datatable>
+                        </div>
+
+            </lightning-card>
+</template>

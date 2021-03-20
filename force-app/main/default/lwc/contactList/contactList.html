@@ -1,0 +1,12 @@
+<template>
+        <lightning-card >        
+            <template if:true={contacts.data}>
+                <lightning-datatable
+                    key-field="LastName"
+                    data={contacts.data}
+                    columns={columns}
+                >
+               </lightning-datatable>
+            </template>
+        </lightning-card>
+    </template>

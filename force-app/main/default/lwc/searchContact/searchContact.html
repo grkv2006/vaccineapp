@@ -1,0 +1,10 @@
+<template>
+        <lightning-card title="Search contacts" icon-name="standard:lead">
+                <div class="slds-m-around_large">
+                        <lightning-input type="text" label="Enter contact Name"  value={contactname} onchange={handleContactChange}></lightning-input>
+                        
+                    </div>   
+                    <c-matching-contacts contactname={contactname} ></c-matching-contacts>
+
+            </lightning-card>
+</template>

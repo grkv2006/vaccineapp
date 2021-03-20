@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="first component" icon-name="utility:activity" >
+    <div class="slds-m-around_medium">
+         <lightning-input label="Name" value={name} onchange={handleChangeName} >
+            </lightning-input>
+        <lightning-input label="phone" value={phone} onchange={handleChangePhone} >
+            </lightning-input>
+       <lightning-input label="email" value={email} onchange={handleChangeEmail} >
+            </lightning-input>
+       
+        <lightning-button class="slds-m-around_medium" label="submit" onclick={handleClick} slot="actions" >
+                </lightning-button>
+   
+    <template if:true={isVisible}>
+     <p class="slds-m-around_small" >
+            name :{name} 
+            phone : {phone}
+            email : {email}
+
+     </p>
+    </template>
+    </div>
+    
+</lightning-card>
+</template>

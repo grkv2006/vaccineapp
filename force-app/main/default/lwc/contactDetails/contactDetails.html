@@ -1,0 +1,17 @@
+<template>
+        <lightning-card title="Child to Parent" icon-name="custom:custom42">
+        <div class="slds-m-around_medium">
+            <p class="slds-text-align_center slds-p-around_small">
+                name : {name}
+            </p>
+            <p class="slds-text-align_center slds-p-around_small">
+                phone:{phone}
+            </p>
+            <p class="slds-text-align_center slds-p-around_small">
+                email: {email}
+            </p>
+        </div>
+        
+        <c-new-contact class="slds-show slds-is-relative" onsubmit={handSubmit}></c-new-contact>
+    </lightning-card>
+</template>

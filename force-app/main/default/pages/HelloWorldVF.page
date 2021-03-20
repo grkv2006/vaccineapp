@@ -1,0 +1,11 @@
+<apex:page>
+<apex:includeLightning/>
+    <div id="Lightningcomponent">
+    <script>
+        $lightning.use("c:HelloWorldLWCAPP",function){
+             $lightning.createComponent("c:helloWorldLWC",{},"lightningComponent",function(CMP))
+             )};
+        )};
+    </script>
+</div>
+</apex:page>

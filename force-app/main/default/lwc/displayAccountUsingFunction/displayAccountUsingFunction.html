@@ -1,0 +1,13 @@
+<template>
+        <lightning-card title="Account Record using Wired with Function" icon-name="standard:account">
+            <lightning-button label="Call Imperatively" variant="brand" slot="footer" onclick={handleClick}></lightning-button>
+            <template for:each={result} for:item="account">
+                <div key={account.Id} class="slds-has-divider_top slds-p-around_medium">
+                    <b><p>{account.Name}</p></b>
+                    <p>{account.Rating}</p>
+                    <p>{account.Industry}</p>
+                    <p>{account.AnnualRevenue}</p>
+                </div>
+            </template>
+        </lightning-card>
+    </template>

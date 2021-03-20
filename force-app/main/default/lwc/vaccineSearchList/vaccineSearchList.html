@@ -1,0 +1,22 @@
+
+        <template>
+                <div class="topbar"></div>
+                <div class="slds-card listview slds-p-around_small">
+                    <div class="scrollable-view">
+                            <template if:true={searchData}>
+                                <template for:each={searchData} for:item="Vaccine">
+                                <div key={Vaccine.Id} class="slds-p-around_medium">
+                                      
+                                    <c-vaccine-details-card myvaccine={Vaccine} onbookingevt={handleBookingEvent}></c-vaccine-details-card>
+                                   
+                                </div>
+                            </template>
+                            <template if:false={searchData}>
+                            No hospitals. Select vaccine type and Zip code 
+                            </template>
+                        </template>
+                    </div>
+                </div>
+               <c-modal-appointment  vaccineobject={vaccineobject} >
+                </c-modal-appointment>
+            </template>

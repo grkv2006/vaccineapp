@@ -1,0 +1,13 @@
+<template>
+        <lightning-card title="iteration example" icon-name="custom:custom33">
+            <div class="slds-m-around_medium">
+            <template for:each={property.data} for:item="account">
+               <div key={account.Id}>
+            
+               <p><lightning-formatted-name value={account.name}></lightning-formatted-name></p>
+             
+            </div>
+            </template>
+        </div>
+        </lightning-card>
+    </template>

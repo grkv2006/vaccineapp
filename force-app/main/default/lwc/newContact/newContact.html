@@ -1,0 +1,15 @@
+<template>
+        <lightning-card  icon-name="custom:custom33">
+            <div class="slds-m-around_medium">
+                    <h1 class="slds-text-heading_small"> create new contact</h1>
+                    <p>  <lightning-input label="name" value={name} onchange={handleName}></lightning-input></p>
+                <p><lightning-input value={phone} label="phone"  onchange={handlePhone}></lightning-input></p>
+                <p><lightning-input value={email}  label="Email"  onchange={handleEmail}></lightning-input></p>
+                <lightning-button 
+                label="Submit"
+                icon-name="utility:chevronright"
+                onclick={handleSubmit}>
+            </lightning-button>
+            </div>
+        </lightning-card>
+    </template>

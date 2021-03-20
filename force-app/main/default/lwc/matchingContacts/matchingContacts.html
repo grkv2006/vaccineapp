@@ -1,0 +1,10 @@
+<template>
+        <div if:true={result} class="slds-p-around_medium slds-box slds-m-around_medium" style="border-color: purple;">
+                <lightning-datatable data={result}
+                                     columns={columns}
+                                     key-field="Id"
+                                     onrowselection= {selectedRowHandler} >
+                </lightning-datatable>
+                
+        </div>
+</template>
